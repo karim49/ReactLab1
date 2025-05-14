@@ -8,20 +8,22 @@ import AboutMe from './components/AboutMe';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
+import { Container, Row, Col, Button } from "react-bootstrap";
+import GridHelper from './components/GridHelper';
 
-function App() {
-  // const [count, setCount] = useState(0)
+function App()
+{
 
   return (
     <>
-    <div>   
-    <Hero></Hero>
-    <AboutMe></AboutMe>
-    <Skills></Skills>
-    <Portfolio></Portfolio>
-    <Footer></Footer>
+      <Container >
+          <Hero />
+          <AboutMe />
+          <Skills />
+          {/* <Portfolio />
+          <Footer /> */}
+      </Container>
 
- </div>
     </>
   )
 }
