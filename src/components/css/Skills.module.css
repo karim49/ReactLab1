@@ -13,23 +13,53 @@
   max-width: 600px;
   margin: 0 auto;
 }
-
-
 .focusTitle {
   position: relative;
-  display: inline-block;
+  display: block;
   padding-bottom: 5px;
   margin-bottom: 20px;
+  font-size: x-large;
 }
-
-
 
 .focusList {
   list-style: none;
   padding-left: 0;
-  margin: 0;
+  margin: 1px;
+  text-align: left;
+  border-top: 5px solid #ffffff;
+  font-size: large;
 }
 
 .focusList li {
-  margin-bottom: 8px;
+  margin: 10px;
+}
+
+
+
+.skillbar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  width: 100px;
+  background-color: #8b8880;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.bar {
+  flex-grow: 1;
+  background-color: #eaeae7;
+  height: 40px;
+  position:relative;
+}
+
+.progress {
+  background-color: #bcbab5;
+  height: 100%;
 }

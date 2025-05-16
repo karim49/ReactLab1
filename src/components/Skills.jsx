@@ -13,8 +13,7 @@ const skillLevels = [
   { label: 'WordPress', value: 50 },
 ];
 
-const Skills = () =>
-{
+const Skills = () => {
   return (
 
     <Container className={`${styles['skillsSection']} py-5 text-light`}>
@@ -29,9 +28,9 @@ const Skills = () =>
       </Row>
 
       <Row>
-        <Col md={4}>
-          <h5 className={`${styles.focusTitle} mb-3`}>MY FOCUS</h5>
-          <ul className={styles.focusList}>
+        <Col md={4} className="d-flex flex-column justify-content-center align-items-center text-center" >
+          <h5 className={`${styles.focusTitle} mt-6`}>MY FOCUS</h5>
+          <ul className={`${styles.focusList} `}>
             <li>UI/UX Design</li>
             <li>Responsive Design</li>
             <li>Web Design</li>
@@ -41,19 +40,17 @@ const Skills = () =>
         <Col md={8}>
           {skillLevels.map((skill, idx) => (
             <div className="mb-3" key={idx}>
-              <label>{skill.label}</label>
-              <ProgressBar
-                now={skill.value}
-                label={`${skill.value}%`}
-                style={{
-                  backgroundColor: '#09090999',
-                  height: '20px',
-                }}
-                variant="info"
-              />
+              <div className={styles.skillbar}>
+                <span className={styles.label}>{skill.label}</span>
+                <div className={styles.bar}>
+                  <div className={styles.progress} style={{ width: `${skill.value}%` }}
+                  ></div>
+                </div>
+              </div>
             </div>
           ))}
         </Col>
+
       </Row>
     </Container>
   );
